@@ -1,0 +1,51 @@
+# import the random module
+
+import random
+
+# create subjects
+Subjects =[
+    "Shahrukh Khan",
+    "Virat Kohli",
+    "Nirmala Sitaraman",
+    "A Mumbai Cat",
+    "A Group of Monkey's",
+    "Prime Minister Modi",
+    "Auto Rickshaw Driver from Delhi"
+]
+
+
+
+Actions = [
+    "Launches",
+    "Cancels",
+    "Dances with",
+    "Eats",
+    "Declares War on",
+    "orders",
+    "Celebrates"
+]
+
+Places_or_things = [
+    "At Red fort",
+    "in Mumbai local train",
+    "A plate of Samosa",
+    "inside parliament",
+    " At Ganga ghat",
+    "During IPL Match",
+    "India Get"
+]
+
+# start the headline generation loop
+while True:
+    subject = random.choice(Subjects)
+    action = random.choice(Actions)
+    place_or_thing = random.choice(Places_or_things)
+
+    headline =f" Breaking News: {subject}{action}{place_or_thing} "
+    print("\n"+ headline)
+    user_input = input("\nDo you want another headline? (yes/no)".strip())
+    if user_input == "no":
+        break
+
+# print goodbye message
+print("/nThanks for using the fake news headline generator. Have a fun day")
